@@ -1,0 +1,225 @@
+$base-color: white;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// body {
+//   // background-color: navy;
+
+//   .header {
+//     background-color: $base-color;
+//   }
+// }
+
+@mixin button-style($btn-color) {
+  border: none;
+  padding: 10px 15px;
+  background-color: $btn-color;
+  color: white;
+  cursor: pointer;
+}
+
+// .btn-primary {
+//   border: none;
+//   padding: 10px 15px;
+//   background-color: green;
+//   color: white;
+//   cursor: pointer;
+// }
+
+// .btn-secondary {
+//   border: none;
+//   padding: 10px 15px;
+//   background-color: gray;
+//   color: white;
+//   cursor: pointer;
+// }
+
+.btn-primary {
+  @include button-style(green);
+}
+
+.btn-secondary {
+  @include button-style(gray);
+}
+
+.header {
+  .headerTop {
+    width: 100%;
+    padding: 5px 25px;
+    display: flex;
+    justify-content: space-between;
+
+    background-color: #06001d;
+    color: #486bb3;
+    align-items: center;
+
+    .headerTopLeft {
+      display: flex;
+      gap: 10px;
+      list-style: none;
+    }
+
+    .headerTopRight {
+      display: flex;
+
+      gap: 10px;
+
+      .headerTopRightLinks {
+        a {
+          text-decoration: none;
+          color: #486bb3;
+        }
+      }
+    }
+  }
+
+  .headerBottom {
+    width: 100%;
+    background-color: $base-color;
+    // position: ;
+    padding: 20px 70px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .headerBottomNavbar {
+      display: flex;
+
+      gap: 10px;
+
+      .navbarItem {
+        text-decoration: none;
+
+        color: #18418c;
+
+        font-weight: 500;
+        font-size: 20px;
+      }
+
+      .navbarItem:hover {
+        color: black;
+
+        transition: 1s;
+      }
+    }
+  }
+}
+
+
+.home{
+    position: absolute;
+
+    // banner area start
+    .banner{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 40px;
+            background-image: url(../images/bg2.jpg);
+            align-items: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 80vh;
+
+            overflow: hidden;
+
+            .bannerTitle{
+                color: white;
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+                .title{
+                    font-size: 64px;
+                    font-weight: 600;
+                }
+                .subtitle{
+                    font-size: 32px;
+                }
+                .bannerInfo{
+
+                    display: flex;
+                    justify-content: space-evenly;
+
+                    p{
+                        i{
+                            border: 1px solid rgb(69, 56, 138);
+                            background-color: rgb(69, 56, 138);
+                            border-radius: 100%;
+                            padding: 10px;
+                        }
+
+                        
+                    }
+
+                    p:hover{
+                        i{
+
+                            border-color: #06001d;
+                            background-color: #06001d;
+                            transition: 1s;
+                        }
+                    }
+                }
+            }
+
+            .bannerHero{
+                img{
+
+                    width: 80%;
+                    height: auto;
+                }
+            }
+
+    }
+
+    // banner area end
+
+    // services area start
+
+    .services{
+        position: relative;
+
+        top: -90px;
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        padding: 60px;
+
+        text-align: center;
+
+        .service{
+
+            background-color: white;
+            border: 1px solid white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+
+            gap: 20px;
+
+            .serviceTitle{
+                width: 100%;
+                display: flex;
+                gap: 10px;
+
+                font-size: larger;
+            }
+
+            .serviceDescription{
+                color: gray;
+                font-size: 16px;
+            }
+
+            .serviceBtn{
+                text-decoration: none;
+
+                font-size: large;
+            }
+        }
+    }
+}
